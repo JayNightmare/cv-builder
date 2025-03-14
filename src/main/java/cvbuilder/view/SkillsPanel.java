@@ -66,7 +66,7 @@ public class SkillsPanel {
                     listModel.addElement("  ✓  | " + skill);
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                JOptionPane.showMessageDialog(null, "Error loading skills: " + e.getMessage());
             }
         }
     }
@@ -79,7 +79,7 @@ public class SkillsPanel {
                 bw.newLine();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Error saving skills: " + e.getMessage());
         }
     }
 
@@ -91,9 +91,11 @@ public class SkillsPanel {
             int selectedIndex = skillsList.getSelectedIndex();
             if (selectedIndex != -1) {
                 String selectedSkill = skillsList.getSelectedValue();
+                //selectedSkill = selectedSkill.replace("  ✓  | ", "").trim();
+
                 String newSkill = JOptionPane.showInputDialog(skillsPanel, "Edit skill:", selectedSkill);
-                if (newSkill != null && !newSkill.trim().isEmpty()) {
-                    SkillsPanel.listModel.set(selectedIndex, newSkill.trim());
+                if (newSkill != null && !newSkill.trim().isEmpty() && !newSkill.equals(selectedSkill)) {
+                    listModel.set(selectedIndex, "  ✓  | " + newSkill.trim());
                     skills.set(selectedIndex, newSkill.trim());
                     saveSkills();
                 }
@@ -101,6 +103,7 @@ public class SkillsPanel {
         });
         return editButton;
     }
+
 
     // Get the Delete Button
     private static JButton getDeleteButton(JList<String> skillsList) {
@@ -126,7 +129,7 @@ public class SkillsPanel {
                 skillsList.add(line.trim()); // Add skill to list
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Error reading skills file: " + e.getMessage());
         }
         return skillsList;
     }
