@@ -1,23 +1,70 @@
-# cvbuilder_2
+# CV Builder
 
-## Getting started
+CV Builder is a Java-based application designed to help users easily create, manage, and export professional curriculum vitae (CVs). This project aims to simplify the process of generating high-quality, customizable CVs with an intuitive interface and robust feature set.
 
-This is the starting point for your cvbuilder coursework. The last number in the repo name should match the last number in your student id (Knumber). 
+## Features
 
-# TB2 Software Development Coursework - CVBuilder App
+- **User-Friendly Interface:** Simple and intuitive UI for entering and editing CV details.
+- **Customizable Templates:** Choose from multiple professionally designed templates.
+- **Section Management:** Add, edit, remove, and reorder sections such as Education, Work Experience, Skills, Projects, and more.
+- **Export Options:** Export your CV to PDF or other supported formats.
+- **Data Persistence:** Save your CV data locally for future editing.
+- **Print-Ready:** Generated CVs are formatted for easy printing.
 
-As part of Unit 2 - Software Application Development you have a [Software Development Coursework Assignment](https://canvas.kingston.ac.uk/courses/26279/assignments/133246) that is worth 30% of your total module mark.  There is a [Coursework Assignment Brief](./docs/CourseworkAssignmentBrief.md) which details the Requirements and Assessment Criteria. It is important that you only do the Requirements (CV Sections) that are assigned to you according to the last number in your student id (Knumber). You are provided with some typical [data](./data/cv_repo_2.csv) to get you started with your application. The cvbuilder follows on from the Swing Portfolio Coursework that you did - in particular for the compulsory User Section of the CV. This was all discussed in the [CI5105 TB2 Week 7 - Coursework Lecture Video](https://kingstonuniversity.sharepoint.com/:v:/r/sites/Course_ci5105_all_ty13_23-fmUrIjN9H4HBt/Shared%20Documents/General/Recordings/CI5105TB2Week7Lecture-CWK-20240222_111951-Meeting%20Recording.mp4?csf=1&web=1&e=QpdUcA&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
- 
+## Getting Started
 
-You should follow a development process similar to the specified for your UserProfileBuilder i.e. you must develop your code in this repository with the correct use of KUGitlab with frequent commits and appropriate commit messages as you progress.
+### Prerequisites
 
-# CV Builder App Start Code 
+- Java 8 or higher
+- [Optional] Maven or Gradle for building the project
 
-You have been provided with a basic Maven Project that includes a single package (cvbuilder) with a .gitkeep file in it. This should be the top-level package for your code and you should create other packages beneath this. You should clone this project as covered in (Using KUGitlab - Access and Workflow)[https://kingstonuniversity.sharepoint.com/:p:/s/CI5105Privatemst/EXORk0ko9Y5EiZaPDW8x0vcBQ4ltw2hfrlRG3kj9UimQSg?e=6lyeEW] 
+### Installation
 
-To get this sample code onto your local machine you will need to:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/JayNightmare/cv-builder.git
+   cd cv-builder
+   ```
 
-- [ ]  [Create a project access token ](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#personal-access-tokens). This will be used to allow you to authenticate to GitLab.com/KUGitlab for the purposes of typical operations e.g. cloning and pushing to private repositories in your sub-group.  You will typically only need on e personal access token but you can create a new one whenever you require it and delete old ones. 
--[] Optionally Import the Project into your Portfolio Namespace - for 'Self-imported Repository' if it hasn't been 'Pre-imported'. Check if the Repository is already in your Namespace 
-- [ ]  [Clone this new Repository using your Personal Access Token](https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html#clone-using-a-token). You can do this from an IDE (e.g. NetBeans) or from the command-line (e.g. Git Bash) 
-- [ ] Use a Git development process (add, commit, push) to version manage your code.  This will be covered in the module but is [typically](https://docs.gitlab.com/ee/gitlab-basics/add-file.html). Currently your Portfolio Sub-Group has not been set-up and so you will not be able to push back your changes. You don't have the permission to do this to the origin repository - or else these changes would change the sample code for everyone else!
+2. **Build the project:**
+   - Using Maven:
+     ```bash
+     mvn clean install
+     ```
+   - Or using Gradle:
+     ```bash
+     gradle build
+     ```
+
+3. **Run the application:**
+   ```bash
+   java -jar target/cv-builder.jar
+   ```
+   (Adjust the path/command based on your build tool and output.)
+
+## Usage
+
+1. Launch the application.
+2. Fill in your personal and professional information using the provided forms.
+3. Customize your CV by adding or removing sections.
+4. Preview your CV.
+5. Export or print your CV as needed.
+
+## Contributing
+
+Contributions are welcome! Please open issues to report bugs or suggest features, and submit pull requests for improvements.
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a pull request
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+- Inspired by open-source CV/resume generators.
+- Thanks to all contributors and users!
